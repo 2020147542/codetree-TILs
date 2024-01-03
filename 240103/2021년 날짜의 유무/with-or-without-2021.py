@@ -10,7 +10,7 @@ def is_exist():
             return False
         
     elif m == 2:
-        if d > 29:
+        if d > 28:
             return False
 
     else:
