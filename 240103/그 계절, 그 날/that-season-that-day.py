@@ -15,19 +15,15 @@ def is_leap():
     return True
 
 
-def is_exist(leap):
+def is_exist():
 
     if m == 2:
-        if leap:
-            return d <= 29
-        else:
-            return d <= 28
+        return d <= 29 if is_leap() else d <= 28
 
     if m == 4 or m == 6 or m == 9 or m == 11:
         return d <= 30
     
-    else:
-        return d <= 31
+    return d <= 31
 
 
 def seasons():
@@ -41,15 +37,7 @@ def seasons():
         return "Winter"
 
 
-if is_leap():
-    # 윤년 = 2월 28일까지
-    if is_exist(True):
-        print(seasons())
-    else:
-        print(-1)
-    
+if is_exist():
+    print(seasons())
 else:
-    if is_exist(False):
-        print(seasons())
-    else:
-        print(-1)
+    print(-1)
