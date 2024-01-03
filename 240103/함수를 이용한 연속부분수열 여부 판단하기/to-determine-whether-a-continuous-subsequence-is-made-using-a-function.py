@@ -13,7 +13,8 @@ def is_b(a, b):
             for j in range(n2):
                 if b[j] != a[i+j]:
                     return False
-                return True
+            
+            return True
     
     return False
 
