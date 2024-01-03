@@ -9,11 +9,10 @@ def is_b(a, b):
         return False
 
     for i in range(n1):
-        if a[i] == b[0] and (n1-i) > n2:
+        if a[i] == b[0] and (n1-i -1) > n2:
             for j in range(n2):
                 if b[j] != a[i+j]:
-                    return False
-            
+                    break
             return True
     
     return False
