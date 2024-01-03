@@ -8,15 +8,21 @@ def is_b(a, b):
     if n1 < n2:
         return False
 
+    flag = False
     for i in range(n1):
-        if a[i] == b[0] and (n1-i -1) > n2:
-            for j in range(n2):
-                if b[j] != a[i+j]:
-                    break
+        if a[i] == b[0]:
+            for j in range(1, n2):
+                if b[j] == a[i+j]:
+                    flag = True
+                else:
+                    flag = False
+
+        if flag:
             return True
     
-    return False
+        i += n2
 
+    return False
 
 if is_b(a, b):
     print("Yes")
